@@ -15,7 +15,8 @@
 function [AllSpikesPerBin,actElPerBin,edges,x]=f_SC_get_Theta_and_n_perBin(TS,time_start,time_end,bin)
 
     %% 0) init  
-    edges=time_start:step:time_end;
+    binStep = bin/2;
+    edges=time_start:binStep:time_end;
     x=edges(2:end);
     SPIKEHISTOGRAM=zeros(length(x),size(TS,2));
        
