@@ -12,7 +12,7 @@
 %
 % written by Manuel Ciba, 2016/2017
 
-function [AllSpikesPerBin,actElPerBin,edges,x]=f_SC_get_Theta_and_n_perBin(TS,time_start,time_end,bin)
+function [AllSpikesPerBin,ActiveSTperBin,edges,x]=f_SC_get_Theta_and_n_perBin(TS,time_start,time_end,bin)
 
     %% 0) init  
     binStep = bin/2;
@@ -31,6 +31,6 @@ function [AllSpikesPerBin,actElPerBin,edges,x]=f_SC_get_Theta_and_n_perBin(TS,ti
     %% 2) calculate parameter over all electrodes 
     AllSpikesPerBin=sum(SPIKEHISTOGRAM,2)';                                 % number of spikes per bin over all electrodes
     mask=SPIKEHISTOGRAM~=0;
-    actElPerBin=sum(mask,2)';                                               % number of active electrodes per bin
+    ActiveSTperBin=sum(mask,2)';                                               % number of active electrodes per bin
         
 end

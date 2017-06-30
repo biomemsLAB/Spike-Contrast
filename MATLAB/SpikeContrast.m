@@ -9,8 +9,8 @@
 % Output:   S:          Synchrony index (0: min. synchrony, 1: max. synchrony) 
 %           PREF:       Used preferences/parameter to calculate Spike-contrast
 %
-% needed functions:     [AllSpikesPerBin,actElPerBin,edges,xvalues]=getNumSpikesAndActElPerBin(TS,rec_dur,bin);
-%                       [y_binned,x_step,edges_step]=binning(y,rec_dur,binsize,step,flag_binary) 
+% needed functions:     [AllSpikesPerBin,ActiveSTperBin,edges,xvalues]=f_SC_get_Theta_and_n_perBin(TS,time_start,time_end,bin);
+%                       [y_binned,x_step,edges_step]=binning(y,time_start,time_end,binsize,step,flag_binary) 
 %
 % written by Manuel Ciba, 2016/2017
 
